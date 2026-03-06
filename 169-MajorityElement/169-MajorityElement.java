@@ -1,4 +1,4 @@
-// Last updated: 06/03/2026, 18:53:13
+// Last updated: 06/03/2026, 18:59:05
 1class Solution {
 2    public int majorityElement(int[] nums) {
 3        int count=0;

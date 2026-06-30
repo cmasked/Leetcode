@@ -1,4 +1,4 @@
-// Last updated: 30/06/2026, 14:36:03
+// Last updated: 30/06/2026, 14:42:05
 1class Solution {
 2    public List<List<String>> groupAnagrams(String[] strs) {
 3        HashMap<String,List<String>>map=new HashMap<>();
@@ -17,8 +17,8 @@
 16
 17            }
 18            
-19            List<String> newlist=map.get(key);
-20            newlist.add(strs[i]);
+19            List<String> list=map.get(key);
+20            list.add(strs[i]);
 21            
 22            
 23            

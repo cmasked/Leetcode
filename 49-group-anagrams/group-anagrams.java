@@ -16,8 +16,8 @@ class Solution {
 
             }
             
-            List<String> newlist=map.get(key);
-            newlist.add(strs[i]);
+            List<String> list=map.get(key);
+            list.add(strs[i]);
             
             
             

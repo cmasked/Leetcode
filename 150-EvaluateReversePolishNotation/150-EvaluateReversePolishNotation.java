@@ -1,39 +1,36 @@
-// Last updated: 26/07/2026, 15:28:34
+// Last updated: 26/07/2026, 15:30:58
 1class Solution {
 2    public int evalRPN(String[] tokens) {
 3        Stack<Integer> stack=new Stack<>();
 4        int total=0;
 5        for(int i=0;i<tokens.length;i++){
-6            if(tokens.length==1){
-7                total=Integer.parseInt(tokens[i]);
-8            }
-9            if(!tokens[i].equals("+") && !tokens[i].equals("-") && !tokens[i].equals("/") && !tokens[i].equals("*")   ){
-10                stack.push(Integer.parseInt(tokens[i]));
-11                            }
-12            else{
-13                int b=stack.pop();
-14                int a=stack.pop();
-15
-16                if(tokens[i].equals("+")){
-17                    total=a+b;
-18                    stack.push(total);
-19                }
-20                if(tokens[i].equals("-")){
-21                    total=a-b;
-22                    stack.push(total);
-23                }
-24                if(tokens[i].equals("/")){
-25                    total=a/b;
-26                    stack.push(total);
-27                }
-28                if(tokens[i].equals("*")){
-29                    total=a*b;
-30                    stack.push(total);
-31                }
-32            }
-33
-34        }
-35        return total;
-36        
-37    }
-38}
+6            if(!tokens[i].equals("+") && !tokens[i].equals("-") && !tokens[i].equals("/") && !tokens[i].equals("*")   ){
+7                stack.push(Integer.parseInt(tokens[i]));
+8                            }
+9            else{
+10                int b=stack.pop();
+11                int a=stack.pop();
+12
+13                if(tokens[i].equals("+")){
+14                    total=a+b;
+15                    stack.push(total);
+16                }
+17                else if(tokens[i].equals("-")){
+18                    total=a-b;
+19                    stack.push(total);
+20                }
+21                else if(tokens[i].equals("/")){
+22                    total=a/b;
+23                    stack.push(total);
+24                }
+25                else{
+26                    total=a*b;
+27                    stack.push(total);
+28                }
+29            }
+30
+31        }
+32            return stack.pop();
+33        
+34    }
+35}

@@ -7,14 +7,10 @@ class Solution {
             if(sum>maxsum){
                 maxsum=sum;
 
-            }
-            
+            }        
             if(sum<0){
                 sum=0;
-            }
-            
-            
-
+            }        
         }
         return maxsum;
     }

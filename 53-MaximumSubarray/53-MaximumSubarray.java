@@ -1,4 +1,4 @@
-// Last updated: 10/04/2026, 22:15:10
+// Last updated: 10/08/2026, 19:50:59
 1class Solution {
 2    public int maxSubArray(int[] nums) {
 3        int sum=0;
@@ -8,15 +8,11 @@
 7            if(sum>maxsum){
 8                maxsum=sum;
 9
-10            }
-11            
-12            if(sum<0){
-13                sum=0;
-14            }
-15            
-16            
-17
-18        }
-19        return maxsum;
-20    }
-21}
+10            }        
+11            if(sum<0){
+12                sum=0;
+13            }        
+14        }
+15        return maxsum;
+16    }
+17}
